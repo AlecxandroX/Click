@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pergunta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        button {
+            padding: 20px;
+            font-size: 20px;
+            cursor: pointer;
+            position: absolute;
+        }
+        #sim {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            left: 30%;
+            transform: translateX(-50%);
+        }
+        #nao {
+            background-color: #f44336;
+            color: white;
+            border: none;
+            left: 70%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+    <h1>Cuzinho hoje?</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+
+    <script>
+        const botaoNao = document.getElementById("nao");
+
+        botaoNao.addEventListener("mouseover", function () {
+            const maxX = window.innerWidth - botaoNao.clientWidth;
+            const maxY = window.innerHeight - botaoNao.clientHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            botaoNao.style.left = randomX + "px";
+            botaoNao.style.top = randomY + "px";
+        });
+    </script>
+</body>
+</html>
