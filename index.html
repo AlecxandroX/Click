@@ -38,11 +38,17 @@
     </style>
 </head>
 <body>
-    <h1>Cuzinho hoje?</h1>
+    <h1>Cuzinho hj?</h1>
     <button id="sim">Sim</button>
     <button id="nao">Não</button>
 
     <script>
+        const botaoSim = document.getElementById("sim");
+
+        botaoSim.addEventListener("click", function () {
+            alert("HUMMM SAFADO");
+        });
+
         const botaoNao = document.getElementById("nao");
 
         botaoNao.addEventListener("mouseover", function () {
